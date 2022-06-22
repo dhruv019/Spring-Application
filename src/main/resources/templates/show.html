@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1 align="center" style="color:aqua; background-color:black">Show All Records</h1>
+    <table border="5" align="center" cellpadding="5" cellspacing="5" style="color:blue;">
+        <tr>
+            <th>ID</th> <th>Name</th> <th>Age</th> <th>Password</th>
+        </tr>
+        <tr th:each="u : ${userlist}">
+            <td th:text="${u.id}"></td>
+            <td th:text="${u.name}"></td>
+            <td th:text="${u.age}"></td>
+            <td th:text="${u.pass}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

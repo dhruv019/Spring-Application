@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${error}" style="color:red"></h1>
+<h1 align="center" style="color:aqua; background-color:black">Delete Record</h1>
+<form action="/dhruv/delete" method="post">
+    Enter Record Id: <input type="text" name="deleteid">
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
